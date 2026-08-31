@@ -1,0 +1,134 @@
+{
+  "project_context": {
+    "name": "Krishnendu Healthcare Private Limited (KHPL)",
+    "domain": "B2B Contract/Private-Label Manufacturer of Wet Wipes, Personal Hygiene, Cosmetics, Pet Care",
+    "vibe": "Awwwards-level editorial design. Medical precision meets warm human care. White canvas with bold orange accents.",
+    "theme": "Light mode only (Clinical, clean, authoritative). No dark mode to maintain the clean room aesthetic."
+  },
+  "typography": {
+    "headings": {
+      "family": "'Cabinet Grotesk', sans-serif",
+      "weight": "font-bold to font-black",
+      "tracking": "tracking-tight to tracking-tighter",
+      "usage": "Use for all H1, H2, H3. Highly distinctive, premium corporate feel. Do not use Inter or Roboto."
+    },
+    "body": {
+      "family": "'Manrope', sans-serif",
+      "weight": "font-normal to font-medium",
+      "tracking": "tracking-normal",
+      "usage": "Use for paragraphs, descriptions, and UI text."
+    },
+    "labels": {
+      "style": "uppercase text-xs tracking-[0.2em] font-bold text-primary",
+      "usage": "Overlines, section markers, tags."
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#F26522",
+      "hover": "#D95518",
+      "light": "#FFF0E8",
+      "foreground": "#FFFFFF",
+      "description": "Brand orange. Use for CTAs, active states, key highlights."
+    },
+    "background": {
+      "DEFAULT": "#FFFFFF",
+      "alt": "#FAFAFA",
+      "description": "Crisp white canvas for that clean-room/laboratory feel."
+    },
+    "foreground": {
+      "DEFAULT": "#0A0A0A",
+      "muted": "#525252",
+      "description": "Deep black for high contrast readability."
+    },
+    "border": {
+      "DEFAULT": "#E5E5E5",
+      "description": "Subtle structural lines."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle grain overlay on specific solid color sections to break digital flatness.",
+    "borders": "1px solid borders (#E5E5E5) for grids, cards, and structured bento layouts.",
+    "shadows": "Ambient diffuse shadows for floating navigation and dropdowns only. Cards should be flat with 1px borders.",
+    "radius": "rounded-xl for cards to match the logo's rounded square shape. rounded-full for pill-shaped buttons."
+  },
+  "motion": {
+    "scrolling": "Use lenis for momentum scrolling.",
+    "reveals": "Use framer-motion for masked line-by-line text reveals on headings (Kinetic Hero).",
+    "parallax": "Subtle parallax on hero images and large background assets.",
+    "marquee": "Use react-fast-marquee for slow, editorial ribbon showing certifications (FDA, Sedex, ISO) or product capabilities.",
+    "hover": "Image zoom on hover within clipped/spotlight frames. Buttons should scale down slightly (scale-95) on press."
+  },
+  "layouts": {
+    "hero": "Kinetic layout. Large bold H1, masked text reveal, overlapping clipped image frames. High negative space.",
+    "services_grid": "Bento grid protocol (Mode A: Tetris Grid). Mix col-span-8 and col-span-4 to create asymmetry and visual tension.",
+    "navigation": "Sticky/Fixed header (z-50) using Glassmorphism (Crystal variant: backdrop-blur-xl bg-white/70 border-b border-white/40). Includes Services dropdown and CTA.",
+    "footer": "Massive spacing (py-20 to py-32). Deep orange background to contrast with the light theme body. Giant typography for 'Let's Talk'."
+  },
+  "components": {
+    "buttons": "Pill-shaped (rounded-full). Primary: Orange bg, white text. Secondary: Outline with 1px border. Add hover transition (transform, bg-color).",
+    "cards": "Flat design, no shadow. 1px border. Internal padding generous (p-8 or p-12).",
+    "dropdowns": "Shadcn UI Menu/Dropdown. Must have solid or highly blurred glass background. NO purely transparent backgrounds.",
+    "forms": "Shadcn Input/Textarea with flat aesthetic. Focus rings should be brand orange.",
+    "marquee_ribbon": "Editorial Ribbon. Pale orange background (#FFF0E8) with brand orange text, slow drift, wide gaps."
+  },
+  "images": {
+    "hero": [
+      "https://images.pexels.com/photos/28146795/pexels-photo-28146795.jpeg"
+    ],
+    "capabilities": [
+      "https://images.unsplash.com/photo-1748002388689-c62b45d5c28b",
+      "https://images.pexels.com/photos/9243558/pexels-photo-9243558.jpeg"
+    ],
+    "services": {
+      "wipes": "https://images.pexels.com/photos/8432197/pexels-photo-8432197.jpeg",
+      "hygiene": "https://images.unsplash.com/photo-1668600418844-5b3d2e381e10",
+      "cosmetics": "https://images.pexels.com/photos/3735711/pexels-photo-3735711.jpeg",
+      "pet_care": "https://images.unsplash.com/photo-1581093577421-f561a654a353"
+    },
+    "instructions": "Use these provided URLs. Apply grayscale + orange duotone or full color depending on the emotional contrast needed. Never use placeholder text for images."
+  },
+  "pages": [
+    "Home: Kinetic hero, Editorial marquee (certifications), Bento grid of categories, Mission/Vision manifesto.",
+    "About Us: Brand story, clean room manufacturing facility shots.",
+    "Capabilities: Details on clean rooms, EDI system, QC labs.",
+    "Services: Overview with 3 sections.",
+    "Wipes",
+    "Personal Hygiene",
+    "Pet Care",
+    "Careers: Application form using Shadcn.",
+    "Contact Us: Contact form, location details."
+  ],
+  "accessibility": {
+    "contrast": "Ensure text over orange meets APCA/WCAG ratios. Orange (#F26522) with white text is usually AA for large text.",
+    "focus": "All interactive elements must have focus states.",
+    "testing": "All interactive elements MUST include data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "INSTALL FONTS: Import Cabinet Grotesk and Manrope from Fontsource or Google Fonts into your CSS.",
+    "COLORS: Update tailwind.config.js theme block with the custom KHPL orange (#F26522) under 'primary' and set dark/light theme variables in index.css.",
+    "SPACING: Apply generous spacing (p-8 to p-24) to create a premium editorial feel.",
+    "COMPONENTS: Use Shadcn UI for forms, dialogs, and navigation dropdowns. Customize them to remove the default 'Vercel' look (e.g., make borders 1px solid, use brand colors).",
+    "DO NOT use generic center-aligned layouts for text. Left-align text for better reading flow, use asymmetry.",
+    "DO NOT use raw HTML <select> or <input type='date'>. Use Shadcn components.",
+    "Header MUST be sticky with a glassmorphism effect (bg-white/80 backdrop-blur-md) so content underneath doesn't clash with links.",
+    "Use Framer Motion for scroll reveals and page transitions. Wrap grid items properly.",
+    "Ensure the application strictly operates in Light Theme for the clinical/clean room aesthetic. Do not use dark mode classes unless explicitly for contrast in specific sections like the footer."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use lucide-react or @phosphor-icons/react.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use sonner for toasts, located in /app/frontend/src/components/ui/sonner.js.",
+    "Main agent relies on provided image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN."
+  ]
+}

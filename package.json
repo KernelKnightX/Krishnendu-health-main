@@ -1,0 +1,9 @@
+{
+  "name": "krishnendu-health",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "cd frontend && npm run dev",
+    "install": "cd frontend && npm install"
+  }
+}
