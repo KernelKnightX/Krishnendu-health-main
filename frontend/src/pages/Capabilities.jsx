@@ -210,9 +210,9 @@ export default function Capabilities() {
       </section>
 
       <CTABand
-        title="Ready to audit our claims?"
-        desc="Share your product brief and we'll walk you through certifications, capacity and quality protocols in detail."
-        cta="Request Capability Deck"
+        title="Ready to explore our capabilities?"
+        desc="Share your product brief and we'll respond with certifications, capacity and quality details."
+        cta="Request Information"
       />
     </div>
   );

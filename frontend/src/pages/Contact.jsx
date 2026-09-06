@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
-import { Loader2, Send, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Loader2, Send, Mail, Phone, MapPin, Clock, ArrowUpRight, Factory, Briefcase } from "lucide-react";
 import { PageHero, SectionHead, Reveal } from "@/components/shared";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,10 +17,27 @@ import { SITE } from "@/data/site";
 import { addEnquiry } from "@/lib/store";
 
 const infoCards = [
-  { icon: Mail, label: "Email Us", value: SITE.email, href: `mailto:${SITE.email}`, testId: "contact-email-card" },
-  { icon: Phone, label: "Call Us", value: SITE.phone, href: SITE.phoneHref, testId: "contact-phone-card" },
-  { icon: MapPin, label: "Visit Us", value: SITE.address, testId: "contact-address-card" },
+  { icon: Mail, label: "Email", value: SITE.email, href: `mailto:${SITE.email}`, testId: "contact-email-card" },
+  { icon: Phone, label: "Phone", value: SITE.phone, href: SITE.phoneHref, testId: "contact-phone-card" },
+  { icon: MapPin, label: "Address", value: SITE.address, testId: "contact-address-card" },
   { icon: Clock, label: "Working Hours", value: SITE.hours, testId: "contact-hours-card" },
+];
+
+const resourceLinks = [
+  {
+    icon: Factory,
+    title: "Capabilities",
+    desc: "Automated lines, clean rooms, micro & QC labs.",
+    to: "/capabilities",
+    cta: "Know more",
+  },
+  {
+    icon: Briefcase,
+    title: "Careers",
+    desc: "Production, quality, R&D and supply chain roles.",
+    to: "/careers",
+    cta: "Know more",
+  },
 ];
 
 export default function Contact() {
@@ -54,38 +72,62 @@ export default function Contact() {
         desc="Whether you're launching a new brand or scaling an existing one, our team is ready to talk formulations, capacity and timelines."
       />
 
-      <section className="px-4 py-24 sm:px-8 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12">
+      <section className="px-4 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
-            <SectionHead index="01" label="Get in touch" title="We reply within a day." />
-            <div className="mt-12 space-y-4">
+            <SectionHead
+              index="01"
+              label="Contact details"
+              title="Reach our team directly."
+              desc="For contract manufacturing enquiries or general questions — our team responds within one business day."
+            />
+            <div className="mt-8 grid grid-cols-2 gap-3">
               {infoCards.map((c, i) => (
-                <Reveal key={c.label} delay={i * 0.06}>
+                <Reveal key={c.label} delay={i * 0.05}>
                   <div
                     data-testid={c.testId}
-                    className="flex items-start gap-5 rounded-[1.5rem] border border-border bg-white p-6 transition-colors duration-300 hover:border-brand"
+                    className="flex h-full flex-col rounded-xl border border-border bg-white p-3.5 transition-colors duration-300 hover:border-brand"
                   >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-light">
-                      <c.icon className="h-5 w-5 text-brand" />
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-light">
+                      <c.icon className="h-3.5 w-3.5 text-brand" />
                     </span>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">
-                        {c.label}
+                    <p className="mt-2.5 text-[9px] font-bold uppercase tracking-[0.15em] text-neutral-500">
+                      {c.label}
+                    </p>
+                    {c.href ? (
+                      <a
+                        href={c.href}
+                        className="mt-0.5 text-xs font-bold leading-snug text-ink transition-colors duration-200 hover:text-brand"
+                      >
+                        {c.value}
+                      </a>
+                    ) : (
+                      <p className="mt-0.5 text-xs font-semibold leading-snug text-ink">
+                        {c.value}
                       </p>
-                      {c.href ? (
-                        <a
-                          href={c.href}
-                          className="mt-1 block text-base font-bold text-ink transition-colors duration-200 hover:text-brand"
-                        >
-                          {c.value}
-                        </a>
-                      ) : (
-                        <p className="mt-1 text-base font-semibold leading-relaxed text-ink">
-                          {c.value}
-                        </p>
-                      )}
-                    </div>
+                    )}
                   </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {resourceLinks.map((r, i) => (
+                <Reveal key={r.title} delay={0.2 + i * 0.05}>
+                  <Link
+                    to={r.to}
+                    className="group flex h-full flex-col rounded-xl border border-border bg-neutral-50 p-3.5 transition-colors duration-300 hover:border-brand"
+                  >
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-light">
+                      <r.icon className="h-3.5 w-3.5 text-brand" />
+                    </span>
+                    <p className="mt-2.5 text-xs font-bold text-ink">{r.title}</p>
+                    <p className="mt-1 flex-1 text-[10px] leading-relaxed text-neutral-500">{r.desc}</p>
+                    <span className="mt-2 inline-flex items-center gap-0.5 text-[10px] font-bold text-brand">
+                      {r.cta}
+                      <ArrowUpRight className="h-2.5 w-2.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </Link>
                 </Reveal>
               ))}
             </div>

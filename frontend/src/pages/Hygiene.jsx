@@ -157,8 +157,8 @@ export default function Hygiene() {
 
       <CTABand
         title="Build your hygiene range with us."
-        desc="Baby care, adult skincare or intimate wellness — our R&D team will craft formulations your customers will love."
-        cta="Talk to Our R&D Team"
+        desc="Baby care, adult skincare or personal wellness — our R&D team crafts formulations your customers will love."
+        cta="Enquire Now"
       />
     </div>
   );

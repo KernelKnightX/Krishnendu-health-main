@@ -115,7 +115,7 @@ export default function PetCare() {
       <CTABand
         title="Launch a pet care line they'll love."
         desc="Wipes, shampoos, paw butter and perfumes — formulated gently, manufactured at scale, under your brand."
-        cta="Start Your Pet Range"
+        cta="Enquire Now"
       />
     </div>
   );

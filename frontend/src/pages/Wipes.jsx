@@ -113,7 +113,7 @@ export default function Wipes() {
       <CTABand
         title="Launch your own wipes brand."
         desc="From substrate to lotion to packaging — we handle the entire product journey under your label."
-        cta="Start Your Wipes Line"
+        cta="Enquire Now"
       />
     </div>
   );

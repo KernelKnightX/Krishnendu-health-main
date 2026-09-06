@@ -139,15 +139,16 @@ export const deleteProduct = (id) => {
 };
 
 const SEED_CLIENTS = [
-  { name: "Supples", parent: "Amazon" }, { name: "Solimo", parent: "Amazon" },
-  { name: "Presto", parent: "Amazon" }, { name: "Mamabear", parent: "Amazon" },
+  { name: "Amazon", parent: "Supples · Solimo · Presto · Mamabear" },
+  { name: "Iksu", parent: "Lifestyle Group" },
+  { name: "Morrison", parent: "JL Morrison India Limited" },
+  { name: "Mothercare", parent: "Reliance" },
   { name: "Miss n Chief", parent: "Flipkart" }, { name: "CIR", parent: "Piramal" },
   { name: "Baby Hug", parent: "FirstCry" }, { name: "Pigeon", parent: "Pigeon India Pvt Ltd" },
   { name: "BonnyBoo", parent: "Medplus" }, { name: "Cuddle", parent: "Swara Baby Products" },
   { name: "Yellow Hippo", parent: "Vishal Mega Mart" }, { name: "Juniorrs", parent: "Baby Shop" },
-  { name: "Iksu", parent: "Lifestyle Group" }, { name: "Morrison", parent: "JL Morrison India Limited" },
   { name: "Shills", parent: "Shills Professional" }, { name: "Glam 21", parent: "Cosmoline" },
-  { name: "Bumtum", parent: "Familycare Consumer Pvt Ltd" }, { name: "Mothercare", parent: "Reliance" },
+  { name: "Bumtum", parent: "Familycare Consumer Pvt Ltd" },
   { name: "Tuco", parent: "" }, { name: "Bodyguard", parent: "Sirona" },
 ].map((c, i) => ({ id: `seed-c-${i}`, ...c }));
 
@@ -164,10 +165,10 @@ export const deleteClient = (id) =>
 
 export const getSettings = () =>
   read("khpl_settings", {
-    email: "hello@krishnenduhealthcare.com",
-    phone: "+91 98260 00000",
+    email: "info@krishnenduhealthcare.com",
+    phone: "+91 96694 23000",
     address: "Plot 12, Sector 3, Industrial Area, Pithampur, Madhya Pradesh 454774, India",
-    whatsapp: "919826000000",
+    whatsapp: "919669423000",
   });
 export const saveSettings = (s) => {
   write("khpl_settings", s);
@@ -217,11 +218,11 @@ const DEFAULT_CONTENT = {
     { type: "video", src: "/videos/team-outro.mp4", poster: "/images/factory/team-outro.jpg", caption: "The People Behind the Promise" },
   ],
   mission:
-    "To craft safe, science-backed hygiene essentials — for babies, adults and pets — that make everyday care effortless, and to give every brand we serve a manufacturing partner it never has to second-guess.",
+    "To manufacture safe, science-backed hygiene essentials — wet wipes, personal care and pet products — on FDA-approved automated lines, giving every brand partner a facility they can trust without compromise.",
   vision:
-    "To emerge as India's most trusted contract manufacturing partner for hygiene and personal care — a facility where the world's most loved brands are built, and where 'Made in India' stands for world-class quality.",
+    "To be India's most trusted contract manufacturing partner for hygiene and personal care — a world-class plant where leading brands are made, and where Made in India stands for uncompromising quality.",
   values:
-    "No batch ships until our labs say so — deadlines flex, safety never does. The same protocols whether we make ten thousand units or ten million. Open doors, open books, open audits. And care in every detail, from substrate softness to pack seal.",
+    "Safety before speed — no batch ships until our labs approve it. The same rigorous protocols at every scale, from pilot runs to full production. Full transparency in documentation and compliance. Care in every detail, from substrate softness to pack seal.",
   brandStory: [
     "Krishnendu Healthcare began with a simple observation — the hygiene products Indian families reach for every day, from a baby's first wet wipe to a traveller's sanitizing wipe, were either imported at a premium or made without the rigour they deserved. We set out to change that.",
     "From our world-class facility in Pithampur, Madhya Pradesh, we built a plant where wipes and personal care products are made the way medicine is made — in designated clean rooms, on automated lines with zero human intervention, and tested batch by batch in our own micro and QC labs.",

@@ -5,7 +5,6 @@ import {
   FileCheck,
   Microscope,
   Leaf,
-  ClipboardCheck,
   Globe,
 } from "lucide-react";
 import { Reveal, Label } from "@/components/shared";
@@ -16,7 +15,6 @@ const badges = [
   { icon: Award, name: "ISO 9001:2015", sub: "Quality Management" },
   { icon: FileCheck, name: "GMP", sub: "Good Manufacturing Practice" },
   { icon: Microscope, name: "Micro & QC Labs", sub: "In-House Testing" },
-  { icon: ClipboardCheck, name: "CDSCO", sub: "Licensed Manufacturer" },
   { icon: Leaf, name: "Skin-Safe", sub: "Dermatologically Mindful" },
   { icon: Globe, name: "Export Ready", sub: "Global Compliance" },
 ];

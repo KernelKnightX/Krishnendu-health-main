@@ -91,7 +91,7 @@ export default function Privacy() {
       <CTABand
         title="Ready to work together?"
         desc="Tell us about your brand and product idea — we'll take it from concept to shelf."
-        cta="Start a Project"
+        cta="Enquire Now"
       />
     </div>
   );

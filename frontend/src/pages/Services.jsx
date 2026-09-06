@@ -65,7 +65,7 @@ export default function Services() {
       <CTABand
         title="Not sure which vertical fits your idea?"
         desc="Send us your brief — our team will map it to the right production line and formulation experts."
-        cta="Discuss Your Brief"
+        cta="Enquire Now"
       />
     </div>
   );

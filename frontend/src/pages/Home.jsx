@@ -30,8 +30,8 @@ const slides = content.heroSlides;
 const stats = [
   { k: "04", v: "Specialized production lines" },
   { k: "100%", v: "Batch-tested quality" },
-  { k: "20+", v: "Brand partners" },
-  { k: "24/7", v: "Automated operations" },
+  { k: "50+", v: "Brand partners" },
+  { k: "24/7", v: "FDA-approved machines" },
 ];
 
 const categories = [
@@ -41,7 +41,7 @@ const categories = [
     desc: "Gentle wet wipes, nourishing creams and oils designed for delicate baby skin.",
     img: IMG.baby,
     span: "lg:col-span-7",
-    to: "/services/personal-hygiene",
+    to: "/services",
     testId: "category-baby-care-card",
   },
   {
@@ -50,7 +50,7 @@ const categories = [
     desc: "Refreshing wipes and hygiene solutions that support everyday comfort and confidence.",
     img: IMG.hygiene,
     span: "lg:col-span-5",
-    to: "/services/personal-hygiene",
+    to: "/services",
     testId: "category-adult-hygiene-card",
   },
   {
@@ -59,17 +59,17 @@ const categories = [
     desc: "Specialized wipes and grooming essentials to keep pets clean, healthy and happy.",
     img: IMG.pet,
     span: "lg:col-span-5",
-    to: "/services/pet-care",
+    to: "/services",
     testId: "category-pet-care-card",
   },
   {
     icon: Flower2,
-    title: "Feminine Care",
+    title: "Personal Hygiene",
     desc: "Intimate wipes and personal care products crafted with safety, sensitivity and trust.",
     img: IMG.cosmetics,
     span: "lg:col-span-7",
-    to: "/services/wipes",
-    testId: "category-feminine-care-card",
+    to: "/services",
+    testId: "category-personal-hygiene-card",
   },
 ];
 
@@ -86,7 +86,7 @@ const manifesto = [
 
 const capabilityRows = [
   { num: "01", title: "Global Certifications", desc: "FDA, Sedex and ISO approved facility", icon: ShieldCheck },
-  { num: "02", title: "Advanced Quality Systems", desc: "EDI-backed micro & QC labs", icon: FlaskConical },
+  { num: "02", title: "Advanced Quality Systems", desc: "Pharma grade water purification with micro & QC labs", icon: FlaskConical },
   { num: "03", title: "Specialized Production Lines", desc: "Dedicated lines for every category", icon: Factory },
   { num: "04", title: "Innovation & Trust", desc: "R&D driven, rigorously tested", icon: Lightbulb },
 ];
@@ -280,8 +280,13 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="pt-24 sm:pt-32">
-        <CTABand />
+      <div className="pt-12 sm:pt-16">
+        <CTABand
+          label="Partner with us"
+          title="Ready to bring your product to market?"
+          desc="Contract manufacturing from formulation to finished pack — share your brief and our team will respond."
+          cta="Enquire Now"
+        />
       </div>
     </div>
   );

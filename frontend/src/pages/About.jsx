@@ -30,8 +30,8 @@ const facility = [
   },
   {
     icon: Workflow,
-    title: "EDI System",
-    copy: "Our advanced Electronic Data Interchange system streamlines operations, enabling seamless communication, traceability and efficiency across the supply chain.",
+    title: "Pharma Grade Water Purification",
+    copy: "Our pharma-grade RO water purification system ensures every formulation starts with the highest quality purified water, meeting stringent hygiene and safety standards.",
   },
   {
     icon: Sparkles,
@@ -57,6 +57,9 @@ const facility = [
 
 const clientNames = [
   "Amazon",
+  "Lifestyle Group",
+  "Reliance",
+  "Morrison",
   "Flipkart",
   "Piramal",
   "FirstCry",
@@ -64,8 +67,6 @@ const clientNames = [
   "Medplus",
   "Swara Baby",
   "Vishal Mega Mart",
-  "Lifestyle Group",
-  "Reliance",
   "Sirona",
   "Mothercare",
 ];
@@ -86,16 +87,16 @@ const tourClips = [
   {
     src: "/videos/tour-edi-ro.mp4",
     poster: "/images/factory/tour-edi-ro.jpg",
-    title: "EDI RO Water System",
+    title: "Pharma Grade Water Purification",
     sub: "Pharma-grade purified water",
   },
 ];
 
 const clients = [
-  { name: "Supples", parent: "Amazon" },
-  { name: "Solimo", parent: "Amazon" },
-  { name: "Presto", parent: "Amazon" },
-  { name: "Mamabear", parent: "Amazon" },
+  { name: "Amazon", parent: "Supples · Solimo · Presto · Mamabear" },
+  { name: "Iksu", parent: "Lifestyle Group" },
+  { name: "Morrison", parent: "JL Morrison India Limited" },
+  { name: "Mothercare", parent: "Reliance" },
   { name: "Miss n Chief", parent: "Flipkart" },
   { name: "CIR", parent: "Piramal" },
   { name: "Baby Hug", parent: "FirstCry" },
@@ -104,12 +105,9 @@ const clients = [
   { name: "Cuddle", parent: "Swara Baby Products" },
   { name: "Yellow Hippo", parent: "Vishal Mega Mart" },
   { name: "Juniorrs", parent: "Baby Shop" },
-  { name: "Iksu", parent: "Lifestyle Group" },
-  { name: "Morrison", parent: "JL Morrison India Limited" },
   { name: "Shills", parent: "Shills Professional" },
   { name: "Glam 21", parent: "Cosmoline" },
   { name: "Bumtum", parent: "Familycare Consumer Pvt Ltd" },
-  { name: "Mothercare", parent: "Reliance" },
   { name: "Tuco", parent: "" },
   { name: "Bodyguard", parent: "Sirona" },
 ];
@@ -225,13 +223,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-neutral-50 px-4 py-24 sm:px-8 sm:py-32" data-testid="facility-tour-section">
+      <section className="bg-neutral-50 px-4 py-24 sm:px-8 sm:py-32" data-testid="manufacturing-showcase-section">
         <div className="mx-auto max-w-7xl">
           <SectionHead
             index="05"
-            label="Facility tour"
-            title="Walk the plant."
-            desc="A quick spin through our facility — from the air, to the mixing vessels, to the purified water system behind every formulation."
+            label="Manufacturing at a glance"
+            title="Precision at every stage."
+            desc="A look at how we manufacture — from production floors to quality control and purified water systems."
           />
           <div className="mt-16 grid gap-6 lg:grid-cols-3">
             {tourClips.map((v, i) => (
@@ -280,9 +278,10 @@ export default function About() {
       </section>
 
       <CTABand
-        title="Want to see the facility yourself?"
-        desc="We welcome brand partners for plant visits and audits. Come see how your products will be made."
-        cta="Book a Visit"
+        label="Partner with us"
+        title="Interested in manufacturing with KHPL?"
+        desc="Share your product requirements — we'll respond with capabilities, timelines and next steps."
+        cta="Send an Enquiry"
       />
     </div>
   );

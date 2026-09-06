@@ -174,29 +174,30 @@ export const PageHero = ({ index, label, lines, desc, children }) => (
 );
 
 export const CTABand = ({
+  label = "Partner with us",
   title = "Have a product idea?",
-  desc = "Tell us about your brand and let our R&D and manufacturing teams take it from concept to shelf.",
-  cta = "Start a Project",
+  desc,
+  cta = "Enquire Now",
 }) => (
-  <section className="px-4 pb-24 pt-4 sm:px-8">
+  <section className="px-4 pb-12 pt-4 sm:px-8">
     <Reveal className="mx-auto max-w-7xl">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-brand px-8 py-16 sm:px-16 sm:py-20">
-        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10" />
-        <div className="absolute -bottom-24 right-48 h-48 w-48 rounded-full bg-white/10" />
-        <Label light>Get in touch</Label>
-        <h2 className="mt-6 max-w-2xl font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.02]">
-          {title}
-        </h2>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85">
-          {desc}
-        </p>
+      <div className="flex flex-col gap-3 rounded-2xl border border-border bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6">
+        <div className="min-w-0 flex-1">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand">{label}</p>
+          <h2 className="mt-0.5 font-display text-base font-extrabold tracking-tight text-ink sm:text-lg sm:whitespace-nowrap">
+            {title}
+          </h2>
+          {desc && (
+            <p className="mt-1 text-xs leading-relaxed text-neutral-500 sm:truncate">{desc}</p>
+          )}
+        </div>
         <Link
           to="/contact"
           data-testid="cta-band-button"
-          className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-brand transition-transform duration-300 hover:-translate-y-0.5 active:scale-95"
+          className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-brand px-5 py-2.5 text-xs font-bold text-white transition-[background-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-brand-dark active:scale-95 sm:self-center"
         >
           {cta}
-          <ArrowUpRight className="h-4 w-4" />
+          <ArrowUpRight className="h-3.5 w-3.5" />
         </Link>
       </div>
     </Reveal>
