@@ -38,6 +38,8 @@ export default function PetCare() {
               <img
                 src={IMG.pet}
                 alt="Happy, healthy dogs — KHPL pet care"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>
@@ -47,6 +49,8 @@ export default function PetCare() {
               <img
                 src={IMG.petCare}
                 alt="Pet grooming essentials by KHPL"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>
@@ -105,6 +109,8 @@ export default function PetCare() {
               <img
                 src={IMG.wipes}
                 alt="Pet wipes manufactured by KHPL"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>

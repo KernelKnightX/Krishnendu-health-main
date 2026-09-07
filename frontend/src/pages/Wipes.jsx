@@ -46,6 +46,8 @@ export default function Wipes() {
             <img
               src={IMG.wipes}
               alt="Premium wet wipes manufactured by KHPL"
+              loading="lazy"
+              decoding="async"
               className="aspect-[21/9] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
           </div>
@@ -103,6 +105,8 @@ export default function Wipes() {
               <img
                 src={IMG.wipes}
                 alt="Wet wipe formulations tested in KHPL labs"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>

@@ -84,6 +84,8 @@ export default function Hygiene() {
               <img
                 src={IMG.baby}
                 alt="Baby care cosmetics by KHPL"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>
@@ -93,6 +95,8 @@ export default function Hygiene() {
               <img
                 src={IMG.hygiene}
                 alt="Adult cosmetics and personal care by KHPL"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>
@@ -123,6 +127,8 @@ export default function Hygiene() {
               <img
                 src={IMG.feminineCare}
                 alt="Feminine care cosmetics by KHPL"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>

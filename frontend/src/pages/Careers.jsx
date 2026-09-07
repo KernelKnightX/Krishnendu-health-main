@@ -63,6 +63,8 @@ export default function Careers() {
                 <img
                   src={src}
                   alt="The people of Krishnendu Healthcare"
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>

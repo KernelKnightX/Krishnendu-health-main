@@ -29,6 +29,8 @@ export default function Services() {
                   <img
                     src={s.img}
                     alt={s.name}
+                    loading="lazy"
+                    decoding="async"
                     className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute left-6 top-6 rounded-full bg-white/85 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-brand backdrop-blur-md">

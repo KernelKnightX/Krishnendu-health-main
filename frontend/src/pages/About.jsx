@@ -75,7 +75,7 @@ const tourClips = [
   {
     type: "video",
     src: "/videos/packing-flap-machine.mp4",
-    poster: "/images/doc/hero-auto-packaging.png",
+    poster: "/images/doc/hero-auto-packaging.jpg",
     title: "State of the art cosmetic manufacturing",
     sub: "Automated packing and flap sealing lines",
   },
@@ -89,7 +89,7 @@ const tourClips = [
   {
     type: "video",
     src: "/videos/hero-machine-2.mp4",
-    poster: "/images/doc/hero-folding-line.png",
+    poster: "/images/doc/hero-folding-line.jpg",
     title: "Automated wet wipes production",
     sub: "Multi-station folding and packing lines",
   },
@@ -297,6 +297,8 @@ export default function About() {
                   <img
                     src={item.src}
                     alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 )}

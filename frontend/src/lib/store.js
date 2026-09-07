@@ -212,8 +212,8 @@ export const logoutAdmin = async () => {
 
 const DEFAULT_CONTENT = {
   heroSlides: [
-    { type: "video", src: "/videos/hero-main-machine.mp4", poster: "/images/doc/hero-production-line.png", caption: "India's Trusted Wet Wipes Manufacturers" },
-    { type: "video", src: "/videos/hero-machine-2.mp4", poster: "/images/doc/hero-wipes-machine.png", caption: "Automated Wipes Production Lines" },
+    { type: "video", src: "/videos/hero-main-machine.mp4", poster: "/images/doc/hero-production-line.jpg", caption: "India's Trusted Wet Wipes Manufacturers" },
+    { type: "video", src: "/videos/hero-machine-2.mp4", poster: "/images/doc/hero-wipes-machine.jpg", caption: "Automated Wipes Production Lines" },
     { type: "video", src: "/videos/truck-entry.mp4", poster: "/images/factory/truck-entering.jpg", caption: "From Our Gates to Your Shelves" },
     { type: "video", src: "/videos/team-outro.mp4", poster: "/images/factory/team-outro.jpg", caption: "The People Behind the Promise" },
   ],

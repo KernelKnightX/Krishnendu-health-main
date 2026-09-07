@@ -131,12 +131,14 @@ export default function Home() {
               ))}
             </Reveal>
           </div>
-          <div className="relative lg:col-span-6">
-            <motion.div style={{ y: yImg1 }} className="relative z-10 ml-auto w-4/5">
+          <div className="relative mt-10 lg:col-span-6 lg:mt-0">
+            <motion.div style={{ y: yImg1 }} className="relative z-10 mx-auto w-full max-w-md sm:max-w-lg lg:ml-auto lg:w-4/5">
               <Reveal delay={0.1} className="overflow-hidden rounded-[2rem] border border-border">
                 <motion.img
                   src={IMG.cleanroom}
                   alt="KHPL clean room production unit"
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/3] w-full object-cover"
                   initial={{ scale: 1.15 }}
                   whileInView={{ scale: 1 }}
@@ -145,11 +147,13 @@ export default function Home() {
                 />
               </Reveal>
             </motion.div>
-            <motion.div style={{ y: yImg2 }} className="relative z-20 -mt-24 w-3/5">
+            <motion.div style={{ y: yImg2 }} className="relative z-20 mx-auto -mt-12 w-[85%] max-w-sm sm:-mt-16 sm:w-4/5 lg:-mt-24 lg:w-3/5">
               <Reveal delay={0.25} className="overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
                 <motion.img
                   src={IMG.packing}
                   alt="KHPL automated packing machine"
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/3] w-full object-cover"
                   initial={{ scale: 1.15 }}
                   whileInView={{ scale: 1 }}
@@ -181,6 +185,8 @@ export default function Home() {
                   <img
                     src={c.img}
                     alt={c.title}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />

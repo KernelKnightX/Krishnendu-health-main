@@ -18,22 +18,22 @@ const FACTORY = "/images/factory";
 
 export const IMG = {
   wipes: `${HD}/baby-wipes.jpg`,
-  hygiene: `${HD}/cosmetics-facial-wipes.png`,
-  cosmetics: `${HD}/cosmetics-facial-wipes.png`,
+  hygiene: `${DOC}/cosmetics-facial-wipes.jpg`,
+  cosmetics: `${DOC}/cosmetics-facial-wipes.jpg`,
   feminineCare: `${HD}/feminine-hygiene.jpg`,
-  pet: `${HD}/pet-wipes.png`,
-  petCare: `${HD}/pet-wipes.png`,
+  pet: `${DOC}/pet-wipes.jpg`,
+  petCare: `${DOC}/pet-wipes.jpg`,
   baby: `${HD}/baby-wipes.jpg`,
   aboutReception: "/videos/reception.mp4",
   factoryPhoto: `${HD}/factory-photo.jpg`,
-  cleanroom: `${DOC}/hero-production-line.png`,
-  packing: `${DOC}/hero-wipes-machine.png`,
-  prodWide: `${DOC}/hero-folding-line.png`,
+  cleanroom: `${DOC}/hero-production-line.jpg`,
+  packing: `${DOC}/hero-wipes-machine.jpg`,
+  prodWide: `${DOC}/hero-folding-line.jpg`,
   qcLab: `${FACTORY}/qc-lab.jpg`,
   microLab: `${FACTORY}/micro-lab.jpg`,
   teamOutro: `${FACTORY}/team-outro.jpg`,
   careers1: `${FACTORY}/team-outro.jpg`,
-  careers2: `${HD}/factory-photo.jpg`,
+  careers2: `${DOC}/careers-team.jpg`,
   careers3: `${HD}/factory-photo.jpg`,
   lab: `${FACTORY}/micro-lab.jpg`,
 };
@@ -80,13 +80,13 @@ export const HERO_SLIDES = [
   {
     type: "video",
     src: "/videos/hero-main-machine.mp4",
-    poster: `${DOC}/hero-production-line.png`,
+    poster: `${DOC}/hero-production-line.jpg`,
     caption: "India's Trusted Wet Wipes Manufacturers",
   },
   {
     type: "video",
     src: "/videos/hero-machine-2.mp4",
-    poster: `${DOC}/hero-wipes-machine.png`,
+    poster: `${DOC}/hero-wipes-machine.jpg`,
     caption: "Automated Wipes Production Lines",
   },
   {
@@ -103,4 +103,4 @@ export const HERO_SLIDES = [
   },
 ];
 
-export const INTRO_VIDEO = "/videos/logo-intro-hd.mp4";
+export const INTRO_VIDEO = "/videos/logo-intro.mp4";
