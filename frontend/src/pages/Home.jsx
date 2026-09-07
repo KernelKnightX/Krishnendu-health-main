@@ -20,12 +20,10 @@ import {
   PillLink,
   CTABand,
 } from "@/components/shared";
-import { IMG } from "@/data/site";
+import { IMG, HERO_SLIDES } from "@/data/site";
 import { getContent } from "@/lib/store";
 
 const content = getContent();
-
-const slides = content.heroSlides;
 
 const stats = [
   { k: "04", v: "Specialized production lines" },
@@ -37,7 +35,7 @@ const stats = [
 const categories = [
   {
     icon: Baby,
-    title: "Baby Care Range",
+    title: "Baby Wet Wipes",
     desc: "Gentle wet wipes, nourishing creams and oils designed for delicate baby skin.",
     img: IMG.baby,
     span: "lg:col-span-7",
@@ -47,7 +45,7 @@ const categories = [
   {
     icon: Sparkles,
     title: "Adult Personal Hygiene & Wellness",
-    desc: "Refreshing wipes and hygiene solutions that support everyday comfort and confidence.",
+    desc: "Refreshing wet wipes and hygiene solutions that support everyday comfort and confidence.",
     img: IMG.hygiene,
     span: "lg:col-span-5",
     to: "/services",
@@ -56,7 +54,7 @@ const categories = [
   {
     icon: PawPrint,
     title: "Pet Care",
-    desc: "Specialized wipes and grooming essentials to keep pets clean, healthy and happy.",
+    desc: "Pet wet wipes and grooming essentials to keep pets clean, healthy and happy.",
     img: IMG.pet,
     span: "lg:col-span-5",
     to: "/services",
@@ -64,12 +62,12 @@ const categories = [
   },
   {
     icon: Flower2,
-    title: "Personal Hygiene",
-    desc: "Intimate wipes and personal care products crafted with safety, sensitivity and trust.",
-    img: IMG.cosmetics,
+    title: "Feminine Hygiene",
+    desc: "Intimate wet wipes and feminine care products crafted with safety, sensitivity and trust.",
+    img: IMG.feminineCare,
     span: "lg:col-span-7",
     to: "/services",
-    testId: "category-personal-hygiene-card",
+    testId: "category-feminine-hygiene-card",
   },
 ];
 
@@ -102,7 +100,7 @@ export default function Home() {
 
   return (
     <div data-testid="home-page">
-      <HeroSlider slides={slides} />
+      <HeroSlider slides={HERO_SLIDES} />
 
       <CertificatesStrip />
 
@@ -169,8 +167,8 @@ export default function Home() {
           <SectionHead
             index="02"
             label="What we make"
-            title="Four categories. One standard of care."
-            desc="Every range is developed in-house, tested batch by batch, and manufactured on dedicated production lines."
+            title="Wet wipes and beyond. One standard of care."
+            desc="From baby wet wipes to cosmetics and pet care — every range is developed in-house, tested batch by batch, and manufactured on dedicated production lines."
           />
           <div className="mt-16 grid gap-6 lg:grid-cols-12">
             {categories.map((c, i) => (
@@ -280,7 +278,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="pt-12 sm:pt-16">
+      <div className="pt-24 sm:pt-32">
         <CTABand
           label="Partner with us"
           title="Ready to bring your product to market?"

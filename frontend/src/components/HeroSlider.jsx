@@ -2,18 +2,16 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-const IMAGE_DURATION = 6000;
-const VIDEO_DURATION = 13500;
+const SLIDE_DURATION = 5000;
 
 export default function HeroSlider({ slides }) {
   const [index, setIndex] = useState(0);
   const current = slides[index];
 
   useEffect(() => {
-    const duration = current.type === "video" ? VIDEO_DURATION : IMAGE_DURATION;
-    const t = setTimeout(() => setIndex((i) => (i + 1) % slides.length), duration);
+    const t = setTimeout(() => setIndex((i) => (i + 1) % slides.length), SLIDE_DURATION);
     return () => clearTimeout(t);
-  }, [index, current.type, slides.length]);
+  }, [index, slides.length]);
 
   return (
     <section data-testid="hero-slider" className="relative h-screen w-full overflow-hidden bg-ink">
@@ -44,7 +42,7 @@ export default function HeroSlider({ slides }) {
               alt={current.caption}
               initial={{ scale: 1.12 }}
               animate={{ scale: 1 }}
-              transition={{ duration: IMAGE_DURATION / 1000 + 1.2, ease: "linear" }}
+              transition={{ duration: SLIDE_DURATION / 1000 + 1.2, ease: "linear" }}
               className="h-full w-full object-cover"
             />
           )}
@@ -85,7 +83,7 @@ export default function HeroSlider({ slides }) {
             >
               <span
                 className={`absolute inset-y-0 left-0 rounded-full bg-brand transition-[width] ${
-                  i === index ? "w-full duration-[6000ms]" : i < index ? "w-full" : "w-0"
+                  i === index ? "w-full duration-[5000ms]" : i < index ? "w-full" : "w-0"
                 }`}
               />
             </button>

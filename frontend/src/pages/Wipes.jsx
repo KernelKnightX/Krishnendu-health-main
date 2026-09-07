@@ -101,8 +101,8 @@ export default function Wipes() {
           <Reveal delay={0.15} className="lg:col-span-6">
             <div className="overflow-hidden rounded-[2rem] border border-border">
               <img
-                src={IMG.cosmetics}
-                alt="Cosmetic and skincare wipe formulations"
+                src={IMG.wipes}
+                alt="Wet wipe formulations tested in KHPL labs"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
@@ -112,7 +112,7 @@ export default function Wipes() {
 
       <CTABand
         title="Launch your own wipes brand."
-        desc="From substrate to lotion to packaging — we handle the entire product journey under your label."
+        desc="From formulation to lotion to packaging — we handle the entire product journey under your label."
         cta="Enquire Now"
       />
     </div>

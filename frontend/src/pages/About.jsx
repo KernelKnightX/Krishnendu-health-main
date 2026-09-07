@@ -73,23 +73,32 @@ const clientNames = [
 
 const tourClips = [
   {
-    src: "/videos/tour-drone.mp4",
-    poster: "/images/factory/tour-drone.jpg",
-    title: "Aerial View",
-    sub: "The plant from above",
+    type: "video",
+    src: "/videos/packing-flap-machine.mp4",
+    poster: "/images/doc/hero-auto-packaging.png",
+    title: "State of the art cosmetic manufacturing",
+    sub: "Automated packing and flap sealing lines",
   },
   {
-    src: "/videos/tour-mixing.mp4",
-    poster: "/images/factory/tour-mixing.jpg",
-    title: "Mixing & Formulation",
-    sub: "Where every lotion begins",
-  },
-  {
-    src: "/videos/tour-edi-ro.mp4",
-    poster: "/images/factory/tour-edi-ro.jpg",
+    type: "video",
+    src: "/videos/rd-lab.mp4",
+    poster: "/images/doc/water-purification.jpg",
     title: "Pharma Grade Water Purification",
-    sub: "Pharma-grade purified water",
+    sub: "R&D and quality-controlled water systems",
   },
+  {
+    type: "video",
+    src: "/videos/hero-machine-2.mp4",
+    poster: "/images/doc/hero-folding-line.png",
+    title: "Automated wet wipes production",
+    sub: "Multi-station folding and packing lines",
+  },
+];
+
+const galleryMedia = [
+  { type: "video", src: "/videos/qc-lab.mp4", poster: IMG.qcLab, alt: "Quality control laboratory" },
+  { type: "video", src: "/videos/micro-lab.mp4", poster: IMG.microLab, alt: "Microbiology testing lab" },
+  { type: "image", src: IMG.factoryPhoto, alt: "The Krishnendu Healthcare team" },
 ];
 
 const clients = [
@@ -104,11 +113,11 @@ const clients = [
   { name: "BonnyBoo", parent: "Medplus" },
   { name: "Cuddle", parent: "Swara Baby Products" },
   { name: "Yellow Hippo", parent: "Vishal Mega Mart" },
-  { name: "Juniorrs", parent: "Baby Shop" },
+  { name: "Juniors", parent: "Baby Shop" },
   { name: "Shills", parent: "Shills Professional" },
   { name: "Glam 21", parent: "Cosmoline" },
   { name: "Bumtum", parent: "Familycare Consumer Pvt Ltd" },
-  { name: "Tuco", parent: "" },
+  { name: "Tuco", parent: "Unbottle Pvt. Ltd." },
   { name: "Bodyguard", parent: "Sirona" },
 ];
 
@@ -141,11 +150,18 @@ export default function About() {
           <div className="lg:col-span-6">
             <Reveal className="relative">
               <div className="absolute -left-6 -top-6 h-full w-full rounded-[2rem] bg-brand-light" />
-              <img
-                src={IMG.prodWide}
-                alt="Inside the KHPL clean room production hall"
-                className="relative aspect-[4/3] w-full rounded-[2rem] border border-border object-cover"
-              />
+              <div className="relative overflow-hidden rounded-[2rem] border border-border">
+                <video
+                  src={IMG.aboutReception}
+                  poster={IMG.factoryPhoto}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
             </Reveal>
           </div>
         </div>
@@ -263,14 +279,27 @@ export default function About() {
 
       <section className="bg-neutral-50 px-4 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
-          {[IMG.qcLab, IMG.microLab, IMG.teamOutro].map((src, i) => (
-            <Reveal key={src} delay={i * 0.1}>
+          {galleryMedia.map((item, i) => (
+            <Reveal key={item.src} delay={i * 0.1}>
               <div className="group overflow-hidden rounded-[2rem] border border-border">
-                <img
-                  src={src}
-                  alt="Life and work at Krishnendu Healthcare"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    poster={item.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                )}
               </div>
             </Reveal>
           ))}

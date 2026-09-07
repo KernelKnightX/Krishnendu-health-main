@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { INTRO_VIDEO } from "@/data/site";
 
 export default function IntroSplash() {
   const { pathname } = useLocation();
@@ -10,7 +11,7 @@ export default function IntroSplash() {
     if (pathname === "/" && !sessionStorage.getItem("khpl_intro_seen")) {
       sessionStorage.setItem("khpl_intro_seen", "1");
       setShow(true);
-      const t = setTimeout(() => setShow(false), 8500);
+      const t = setTimeout(() => setShow(false), 12000);
       return () => clearTimeout(t);
     }
   }, [pathname]);
@@ -27,7 +28,7 @@ export default function IntroSplash() {
           className="fixed inset-0 z-[200] bg-ink"
         >
           <video
-            src="/videos/logo-intro.mp4"
+            src={INTRO_VIDEO}
             autoPlay
             muted
             playsInline

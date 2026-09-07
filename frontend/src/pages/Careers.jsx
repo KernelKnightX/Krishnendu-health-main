@@ -57,7 +57,7 @@ export default function Careers() {
 
       <section className="px-4 py-24 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
-          {[IMG.teamOutro, IMG.qcLab, IMG.microLab].map((src, i) => (
+          {[IMG.careers1, IMG.careers2, IMG.careers3].map((src, i) => (
             <Reveal key={src} delay={i * 0.1}>
               <div className="group overflow-hidden rounded-[2rem] border border-border">
                 <img

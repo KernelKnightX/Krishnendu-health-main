@@ -12,7 +12,7 @@ export default function Services() {
             Three verticals. One <span className="text-brand">standard of care.</span>
           </>,
         ]}
-        desc="Private-label and contract manufacturing across wipes, personal hygiene and pet care — from formulation and testing to finished, shelf-ready product."
+        desc="Private-label and contract manufacturing of wet wipes, cosmetics and pet care — from formulation and testing to finished, shelf-ready product."
       />
 
       <section className="px-4 py-24 sm:px-8 sm:py-32">

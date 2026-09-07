@@ -8,62 +8,59 @@ export const SITE = {
   phone: "+91 96694 23000",
   phoneHref: "tel:+919669423000",
   address:
-    "Plot 12, Sector 3, Industrial Area, Pithampur, Madhya Pradesh 454774, India",
+    "Plot No. 77, Smart Industrial Park, near Natrip, Pithampur, Dist. Dhar 454774, (M.P.) India",
   hours: "Mon – Sat, 9:00 AM – 6:00 PM IST",
 };
 
+const HD = "/images/hd";
+const DOC = "/images/doc";
+const FACTORY = "/images/factory";
+
 export const IMG = {
-  hero: "https://images.pexels.com/photos/28146795/pexels-photo-28146795.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  heroCard:
-    "https://images.unsplash.com/photo-1748002388689-c62b45d5c28b?q=80&w=900&auto=format&fit=crop",
-  facility:
-    "https://images.pexels.com/photos/9243558/pexels-photo-9243558.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  wipes:
-    "https://images.pexels.com/photos/8432197/pexels-photo-8432197.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  hygiene:
-    "https://images.unsplash.com/photo-1668600418844-5b3d2e381e10?q=80&w=1600&auto=format&fit=crop",
-  cosmetics:
-    "https://images.pexels.com/photos/3735711/pexels-photo-3735711.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  pet: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop",
-  petCare:
-    "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop",
-  baby: "https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1600&auto=format&fit=crop",
-  lab: "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1600&auto=format&fit=crop",
-  cleanroom:
-    "https://customer-assets-jt897jd0.emergentagent.net/job_krishnendu-health/artifacts/16gmvg2j_DSC01509.webp",
-  prodWide: "/images/factory/production-wide.jpg",
-  packing: "/images/factory/packing-machine.jpg",
-  qcLab: "/images/factory/qc-lab.jpg",
-  microLab: "/images/factory/micro-lab.jpg",
-  teamOutro: "/images/factory/team-outro.jpg",
-  team: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-  team2:
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
+  wipes: `${HD}/baby-wipes.jpg`,
+  hygiene: `${HD}/cosmetics-facial-wipes.png`,
+  cosmetics: `${HD}/cosmetics-facial-wipes.png`,
+  feminineCare: `${HD}/feminine-hygiene.jpg`,
+  pet: `${HD}/pet-wipes.png`,
+  petCare: `${HD}/pet-wipes.png`,
+  baby: `${HD}/baby-wipes.jpg`,
+  aboutReception: "/videos/reception.mp4",
+  factoryPhoto: `${HD}/factory-photo.jpg`,
+  cleanroom: `${DOC}/hero-production-line.png`,
+  packing: `${DOC}/hero-wipes-machine.png`,
+  prodWide: `${DOC}/hero-folding-line.png`,
+  qcLab: `${FACTORY}/qc-lab.jpg`,
+  microLab: `${FACTORY}/micro-lab.jpg`,
+  teamOutro: `${FACTORY}/team-outro.jpg`,
+  careers1: `${FACTORY}/team-outro.jpg`,
+  careers2: `${HD}/factory-photo.jpg`,
+  careers3: `${HD}/factory-photo.jpg`,
+  lab: `${FACTORY}/micro-lab.jpg`,
 };
 
 export const SERVICES = [
   {
     slug: "/services/wipes",
-    name: "Wipes",
+    name: "Wet Wipes",
     tagline: "A promise of care & hygiene",
-    desc: "From baby care to medical use — microbiologically tested wipes crafted under strict quality standards. Baby, refreshing, personal hygiene, bed bath, surgical and cosmetic wipes.",
+    desc: "Contract manufacturing of baby, refreshing, personal hygiene, bed bath, surgical and cosmetic wet wipes — microbiologically tested and made on dedicated automated lines.",
     img: IMG.wipes,
     tags: ["Baby Wipes", "Refreshing", "Personal Hygiene", "Bed Bath", "Surgical"],
   },
   {
     slug: "/services/personal-hygiene",
-    name: "Personal Hygiene",
-    tagline: "World-class care, every day",
-    desc: "Gentle baby creams and oils, adult skincare and personal hygiene essentials — innovation and safety combined to support everyday confidence.",
+    name: "Cosmetics",
+    tagline: "Formulated with care, finished with science",
+    desc: "Contract manufacturing for baby, adult and feminine care cosmetics — from massage oils and sulphate-free washes to serums, creams and intimate wellness ranges.",
     img: IMG.hygiene,
-    tags: ["Baby Creams & Oils", "Adult Skincare", "Intimate Care", "Wellness"],
+    tags: ["Baby Care", "Bath & Body", "Feminine Care", "Hair Care", "Wellness"],
   },
   {
     slug: "/services/pet-care",
     name: "Pet Care",
     tagline: "Because pets are family",
-    desc: "Specialized grooming wipes and gentle formulations designed to keep pets clean, healthy and happy — developed with safety, hygiene and love at the core.",
-    img: IMG.petCare,
+    desc: "Pet wet wipes and grooming essentials manufactured with the same hygiene standards as our human ranges — gentle, safe and private-label ready.",
+    img: IMG.pet,
     tags: ["Pet Wipes", "Grooming", "Paw & Coat", "Odour Control"],
   },
 ];
@@ -78,3 +75,32 @@ export const CERTIFICATIONS = [
   "Zero Human Intervention",
   "Made in India",
 ];
+
+export const HERO_SLIDES = [
+  {
+    type: "video",
+    src: "/videos/hero-main-machine.mp4",
+    poster: `${DOC}/hero-production-line.png`,
+    caption: "India's Trusted Wet Wipes Manufacturers",
+  },
+  {
+    type: "video",
+    src: "/videos/hero-machine-2.mp4",
+    poster: `${DOC}/hero-wipes-machine.png`,
+    caption: "Automated Wipes Production Lines",
+  },
+  {
+    type: "video",
+    src: "/videos/truck-entry.mp4",
+    poster: `${FACTORY}/truck-entering.jpg`,
+    caption: "From Our Gates to Your Shelves",
+  },
+  {
+    type: "video",
+    src: "/videos/team-outro.mp4",
+    poster: `${FACTORY}/team-outro.jpg`,
+    caption: "The People Behind the Promise",
+  },
+];
+
+export const INTRO_VIDEO = "/videos/logo-intro-hd.mp4";

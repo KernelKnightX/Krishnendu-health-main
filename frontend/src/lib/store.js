@@ -146,10 +146,10 @@ const SEED_CLIENTS = [
   { name: "Miss n Chief", parent: "Flipkart" }, { name: "CIR", parent: "Piramal" },
   { name: "Baby Hug", parent: "FirstCry" }, { name: "Pigeon", parent: "Pigeon India Pvt Ltd" },
   { name: "BonnyBoo", parent: "Medplus" }, { name: "Cuddle", parent: "Swara Baby Products" },
-  { name: "Yellow Hippo", parent: "Vishal Mega Mart" }, { name: "Juniorrs", parent: "Baby Shop" },
+  { name: "Yellow Hippo", parent: "Vishal Mega Mart" }, { name: "Juniors", parent: "Baby Shop" },
   { name: "Shills", parent: "Shills Professional" }, { name: "Glam 21", parent: "Cosmoline" },
   { name: "Bumtum", parent: "Familycare Consumer Pvt Ltd" },
-  { name: "Tuco", parent: "" }, { name: "Bodyguard", parent: "Sirona" },
+  { name: "Tuco", parent: "Unbottle Pvt. Ltd." }, { name: "Bodyguard", parent: "Sirona" },
 ].map((c, i) => ({ id: `seed-c-${i}`, ...c }));
 
 export const getClients = () => {
@@ -167,7 +167,7 @@ export const getSettings = () =>
   read("khpl_settings", {
     email: "info@krishnenduhealthcare.com",
     phone: "+91 96694 23000",
-    address: "Plot 12, Sector 3, Industrial Area, Pithampur, Madhya Pradesh 454774, India",
+    address: "Plot No. 77, Smart Industrial Park, near Natrip, Pithampur, Dist. Dhar 454774, (M.P.) India",
     whatsapp: "919669423000",
   });
 export const saveSettings = (s) => {
@@ -212,17 +212,17 @@ export const logoutAdmin = async () => {
 
 const DEFAULT_CONTENT = {
   heroSlides: [
-    { type: "video", src: "/videos/prod-wide.mp4", poster: "/images/factory/production-wide.jpg", caption: "India's Trusted Contract Manufacturers" },
-    { type: "video", src: "/videos/machine-packing.mp4", poster: "/images/factory/packing-machine.jpg", caption: "Precision on Every Line" },
-    { type: "video", src: "/videos/truck-entering.mp4", poster: "/images/factory/truck-entering.jpg", caption: "From Our Gates to Your Shelves" },
+    { type: "video", src: "/videos/hero-main-machine.mp4", poster: "/images/doc/hero-production-line.png", caption: "India's Trusted Wet Wipes Manufacturers" },
+    { type: "video", src: "/videos/hero-machine-2.mp4", poster: "/images/doc/hero-wipes-machine.png", caption: "Automated Wipes Production Lines" },
+    { type: "video", src: "/videos/truck-entry.mp4", poster: "/images/factory/truck-entering.jpg", caption: "From Our Gates to Your Shelves" },
     { type: "video", src: "/videos/team-outro.mp4", poster: "/images/factory/team-outro.jpg", caption: "The People Behind the Promise" },
   ],
   mission:
-    "To manufacture safe, science-backed hygiene essentials — wet wipes, personal care and pet products — on FDA-approved automated lines, giving every brand partner a facility they can trust without compromise.",
+    "To manufacture safe, science-backed wet wipes and hygiene essentials for babies, adults and pets on FDA-approved automated lines — giving every brand partner a manufacturing facility they can trust without compromise.",
   vision:
     "To be India's most trusted contract manufacturing partner for hygiene and personal care — a world-class plant where leading brands are made, and where Made in India stands for uncompromising quality.",
   values:
-    "Safety before speed — no batch ships until our labs approve it. The same rigorous protocols at every scale, from pilot runs to full production. Full transparency in documentation and compliance. Care in every detail, from substrate softness to pack seal.",
+    "Safety before speed — no batch ships until our labs approve it. The same rigorous protocols at every scale, from pilot runs to full production. Full transparency in documentation and compliance. Care in every detail, from formulation to pack seal.",
   brandStory: [
     "Krishnendu Healthcare began with a simple observation — the hygiene products Indian families reach for every day, from a baby's first wet wipe to a traveller's sanitizing wipe, were either imported at a premium or made without the rigour they deserved. We set out to change that.",
     "From our world-class facility in Pithampur, Madhya Pradesh, we built a plant where wipes and personal care products are made the way medicine is made — in designated clean rooms, on automated lines with zero human intervention, and tested batch by batch in our own micro and QC labs.",

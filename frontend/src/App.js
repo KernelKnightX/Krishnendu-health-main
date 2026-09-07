@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import IntroSplash from "@/components/IntroSplash";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Capabilities from "@/pages/Capabilities";
@@ -48,6 +49,7 @@ const PublicLayout = () => (
     <Footer />
     <WhatsAppButton />
     <CookieBanner />
+    <IntroSplash />
   </>
 );
 

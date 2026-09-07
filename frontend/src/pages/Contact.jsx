@@ -186,7 +186,7 @@ export default function Contact() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="wipes">Wet Wipes</SelectItem>
-                      <SelectItem value="personal-hygiene">Personal Hygiene & Cosmetics</SelectItem>
+                      <SelectItem value="personal-hygiene">Cosmetics</SelectItem>
                       <SelectItem value="pet-care">Pet Care</SelectItem>
                       <SelectItem value="private-label">Private Label / Contract Manufacturing</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
@@ -231,7 +231,7 @@ export default function Contact() {
             <iframe
               title="Krishnendu Healthcare location map"
               data-testid="contact-map"
-              src="https://www.google.com/maps?q=Pithampur,%20Madhya%20Pradesh,%20India&output=embed"
+              src="https://www.google.com/maps?q=Smart+Industrial+Park,+Natrip,+Pithampur,+Dhar,+Madhya+Pradesh+454774&output=embed"
               className="h-[420px] w-full"
               loading="lazy"
             />

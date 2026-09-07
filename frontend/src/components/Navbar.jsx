@@ -29,7 +29,7 @@ const secondaryLinks = [
 const serviceLinks = [
   { to: "/services", label: "All Services", icon: LayoutGrid, testId: "nav-services-all-link" },
   { to: "/services/wipes", label: "Wipes", icon: Droplets, testId: "nav-services-wipes-link" },
-  { to: "/services/personal-hygiene", label: "Personal Hygiene", icon: Sparkles, testId: "nav-services-hygiene-link" },
+  { to: "/services/personal-hygiene", label: "Cosmetics", icon: Sparkles, testId: "nav-services-hygiene-link" },
   { to: "/services/pet-care", label: "Pet Care", icon: PawPrint, testId: "nav-services-petcare-link" },
 ];
 
