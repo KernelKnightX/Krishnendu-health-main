@@ -6,13 +6,11 @@ const SLIDE_DURATION = 5000;
 
 export default function HeroSlider({ slides }) {
   const [index, setIndex] = useState(0);
-  const [videoReady, setVideoReady] = useState(false);
   const current = slides[index];
   const nextIndex = (index + 1) % slides.length;
   const nextSlide = slides[nextIndex];
 
   useEffect(() => {
-    setVideoReady(false);
     const t = setTimeout(() => setIndex((i) => (i + 1) % slides.length), SLIDE_DURATION);
     return () => clearTimeout(t);
   }, [index, slides.length]);
@@ -39,30 +37,16 @@ export default function HeroSlider({ slides }) {
           className="absolute inset-0"
         >
           {current.type === "video" ? (
-            <>
-              <img
-                src={current.poster}
-                alt=""
-                aria-hidden="true"
-                fetchPriority="high"
-                decoding="async"
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-                  videoReady ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <video
-                key={current.src}
-                src={current.src}
-                poster={current.poster}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                onLoadedData={() => setVideoReady(true)}
-                className="h-full w-full object-cover"
-              />
-            </>
+            <video
+              key={current.src}
+              src={current.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="h-full w-full object-cover"
+            />
           ) : (
             <motion.img
               src={current.src}

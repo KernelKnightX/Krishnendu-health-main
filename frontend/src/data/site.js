@@ -81,25 +81,21 @@ export const HERO_SLIDES = [
   {
     type: "video",
     src: `/videos/hero-main-machine.mp4${V}`,
-    poster: `${DOC}/hero-production-line.jpg${V}`,
     caption: "India's Trusted Wet Wipes Manufacturers",
   },
   {
     type: "video",
     src: `/videos/hero-machine-2.mp4${V}`,
-    poster: `${DOC}/hero-wipes-machine.jpg${V}`,
     caption: "Automated Wipes Production Lines",
   },
   {
     type: "video",
     src: `/videos/truck-entry.mp4${V}`,
-    poster: `${FACTORY}/truck-entering.jpg${V}`,
     caption: "From Our Gates to Your Shelves",
   },
   {
     type: "video",
     src: `/videos/team-outro.mp4${V}`,
-    poster: `${FACTORY}/team-outro.jpg${V}`,
     caption: "The People Behind the Promise",
   },
 ];
