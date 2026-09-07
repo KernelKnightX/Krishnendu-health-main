@@ -6,7 +6,7 @@ const range = [
   { name: "Baby Wet Wipes", desc: "Ultra-gentle, pH-balanced cleansing for delicate newborn skin." },
   { name: "Baby Hand & Mouth Wipes", desc: "Food-grade safe wipes for messy little moments." },
   { name: "Refreshing Wipes", desc: "Instant freshness for face, hands and body, on the go." },
-  { name: "Bath Towels", desc: "Pre-moistened disposable towels for rinse-free bathing." },
+  { name: "Wet Bath Wipes", desc: "Pre-moistened disposable wipes for rinse-free bathing." },
   { name: "Face & Body Bath Towel", desc: "Full-body cleansing in a single towel — no water needed." },
   { name: "Shampoo Bath Towel", desc: "Rinse-free hair cleansing, ideal for bed-bath care." },
   { name: "Nail Polish Remover Wipes", desc: "Quick, mess-free nail polish removal anywhere." },

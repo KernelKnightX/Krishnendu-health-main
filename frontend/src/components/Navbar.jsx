@@ -36,6 +36,7 @@ const serviceLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -47,9 +48,15 @@ export default function Navbar() {
 
   useEffect(() => {
     setOpen(false);
+    setServicesOpen(false);
   }, [pathname]);
 
   const servicesActive = pathname.startsWith("/services");
+
+  useEffect(() => {
+    if (open && servicesActive) setServicesOpen(true);
+  }, [open, servicesActive]);
+
   const light = pathname === "/" && !scrolled;
 
   const linkClass = ({ isActive }) =>
@@ -179,7 +186,7 @@ export default function Navbar() {
             data-testid="mobile-menu"
           >
             <div className="flex min-h-full flex-col px-8 pb-12 pt-32">
-              {[...primaryLinks, ...secondaryLinks].map((l, i) => (
+              {primaryLinks.map((l, i) => (
                 <motion.div
                   key={l.to}
                   initial={{ opacity: 0, y: 24 }}
@@ -200,30 +207,76 @@ export default function Navbar() {
                   </NavLink>
                 </motion.div>
               ))}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-brand"
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 + primaryLinks.length * 0.06, duration: 0.5 }}
+                className="border-b border-border"
               >
-                Services
-              </motion.p>
-              {serviceLinks.map((s, i) => (
+                <button
+                  type="button"
+                  data-testid="mobile-nav-services-toggle"
+                  onClick={() => setServicesOpen((v) => !v)}
+                  className={`flex w-full items-center justify-between py-5 font-display text-4xl font-extrabold tracking-tight ${
+                    servicesActive ? "text-brand" : "text-ink"
+                  }`}
+                >
+                  Services
+                  <ChevronDown
+                    className={`h-7 w-7 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <AnimatePresence initial={false}>
+                  {servicesOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="space-y-1 pb-5 pl-1">
+                        {serviceLinks.map((s) => (
+                          <NavLink
+                            key={s.to}
+                            to={s.to}
+                            end={s.to === "/services"}
+                            data-testid={`mobile-${s.testId}`}
+                            className={({ isActive }) =>
+                              `flex items-center gap-3 rounded-xl px-3 py-3 text-lg font-semibold transition-colors ${
+                                isActive ? "bg-brand-light text-brand" : "text-ink/80 hover:bg-neutral-50"
+                              }`
+                            }
+                          >
+                            <s.icon className="h-5 w-5 shrink-0 text-brand" />
+                            {s.label}
+                            <ArrowUpRight className="ml-auto h-4 w-4 text-brand" />
+                          </NavLink>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {secondaryLinks.map((l, i) => (
                 <motion.div
-                  key={s.to}
-                  initial={{ opacity: 0, y: 16 }}
+                  key={l.to}
+                  initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45 + i * 0.05 }}
+                  transition={{ delay: 0.05 + (primaryLinks.length + 1 + i) * 0.06, duration: 0.5 }}
                 >
                   <NavLink
-                    to={s.to}
-                    end={s.to === "/services"}
-                    data-testid={`mobile-${s.testId}`}
-                    className="flex items-center gap-3 py-3 text-lg font-semibold text-ink/80"
+                    to={l.to}
+                    data-testid={`mobile-${l.testId}`}
+                    className={({ isActive }) =>
+                      `block border-b border-border py-5 font-display text-4xl font-extrabold tracking-tight ${
+                        isActive ? "text-brand" : "text-ink"
+                      }`
+                    }
                   >
-                    <s.icon className="h-5 w-5 text-brand" />
-                    {s.label}
-                    <ArrowUpRight className="ml-auto h-4 w-4 text-brand" />
+                    {l.label}
                   </NavLink>
                 </motion.div>
               ))}

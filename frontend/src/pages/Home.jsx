@@ -29,7 +29,7 @@ const stats = [
   { k: "04", v: "Specialized production lines" },
   { k: "100%", v: "Batch-tested quality" },
   { k: "50+", v: "Brand partners" },
-  { k: "24/7", v: "FDA-approved machines" },
+  { k: "200+", v: "SKU's" },
 ];
 
 const categories = [
