@@ -59,7 +59,7 @@ export default function HeroSlider({ slides }) {
                 loop
                 playsInline
                 preload="metadata"
-                onCanPlay={() => setVideoReady(true)}
+                onLoadedData={() => setVideoReady(true)}
                 className="h-full w-full object-cover"
               />
             </>
