@@ -1,0 +1,17 @@
+# Backup host: connect this GitHub repo at https://app.netlify.com
+# Site settings → Build: base = frontend, publish = frontend/build (auto from below)
+
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
